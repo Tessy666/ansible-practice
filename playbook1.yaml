@@ -1,15 +1,10 @@
-- name: sample palybook
-  hosts: local
-  connection: local 
-  tasks:
-  - name: print hello world
-    ansible.builtin.debug:
-     msg: "hello world"
+---
+- name: My First Playbook
+  hosts: all
+  connection: local
 
   tasks:
-  - name: print 
-    ansible.builtin.debug:
-     msg: "This is tessy"
-
+    - name: Print message
+      debug:
+        msg: "Hello from Ansible"
     
- 
